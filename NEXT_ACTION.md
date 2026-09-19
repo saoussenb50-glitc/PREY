@@ -1,22 +1,7 @@
 # Next Action
 
-## Mission 09 — Launch one prepared experiment
+## Preserve Experiment #002's live test window
 
-Launch exactly one prepared experiment; do not launch both simultaneously and do not build software. Preferred next action: create the Experiment #002 Upwork Project Catalog listing from `mission-08/EXPERIMENT_README.md`, attach the clearly synthetic sample, and start the 7-day/100-qualified-view clock only when the listing is approved and visible. Record rejection or inadequate exposure as distribution failure, not market rejection.
+Keep the existing r/CreatorServices post unchanged and observe it through **26 September 2026** (7 days from its 19 September publication), or until Reddit exposes **100 qualified views** through a meaningful usable metric, whichever checkpoint is reached first. Record only observable signals: qualified comments, relevant Reddit messages, questions about buying, post views where available, demo clicks where observable, paid runs, and revenue. Do not count upvotes, views, comments, or messages as revenue or validation.
 
-Experiment #001 remains READY — NOT LAUNCHED and may be launched later when its rules-permitting surface and browser execution are available.
-
-## Mission 06 — Square Payout Reality Test
-
-Run exactly one market experiment. Do not hunt for more ideas and do not build a product.
-
-1. Create a synthetic 10-vendor Square consignor payout example containing a refund, discount, shared basket, two commission rates, fees, an exception list, per-vendor statements, and a bookkeeping summary.
-2. Publish one useful before/after demo and one transparent fixed-price inbound offer on an owned social account and in one relevant public community only if its rules permit it.
-3. Offer a manually checked next-period payout run. Start with a header-only or anonymized schema diagnostic; do not request privileged account access.
-4. Stop after 7 days or 100 qualified views, whichever comes first.
-5. Pass only if the experiment produces at least three qualified responses, two anonymized header/schema submissions, and one paid run.
-6. If three qualified prospects receive the offer and none pays, kill the candidate. If one pays, deliver manually; do not build reusable software until two independent paid runs share substantially the same input/output.
-
-No cold email, LinkedIn Premium, spam, unsolicited direct messages, fake testimonials, fake users, fake revenue, or fabricated scarcity.
-
-The full rationale, death ledger, gate counts, zero-dollar model analysis, asset audit, and PREY v2 limits are in `evidence/prey-autopsy-01.md`.
+The primary success signal is **at least one paid manual run**. Customers, paid runs, and revenue are currently **0 / 0 / US$0**. Do not change the offer merely because it has just launched; do not launch Experiment #001 simultaneously; and do not start Experiment #003. At the checkpoint, classify the result from recorded evidence as a paid signal, offer failure under the approved rule, or distribution failure.

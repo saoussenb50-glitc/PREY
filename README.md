@@ -12,17 +12,19 @@ The project deliberately separates research from proof. Complaints, competitor p
 
 | Measure | Current value |
 |---|---:|
-| Missions completed | 01–06 |
+| Missions completed | 01–10 (including 06.5) |
 | Setup/control mission | 00 |
 | Verified autonomous sub-agents spawned | 0 |
+| Apps built | 0 |
 | Customer-facing apps built | 0 |
 | Dashboards built | 0 |
 | Software products built | 0 |
-| Market experiments launched | 0 |
+| Market experiments prepared | 2 |
+| Market experiments live | 1 |
 | Paid customers | 0 |
 | Revenue | $0 |
 | Additional cash spent | $0 |
-| Market-ready experiment kits | 1 |
+| Market-ready experiment kits | 2 |
 
 ## Mission timeline
 
@@ -35,14 +37,16 @@ The project deliberately separates research from proof. Complaints, competitor p
 - **06 — First Blood:** prepared a Square manual market-test kit. It is ready but has not been launched.
 - **07 — Square launch attempt:** browser execution infrastructure blocked publication; the market did not reject the offer.
 - **08 — Second Chamber:** revalidated bodycam SRT correction and prepared a narrow manual test. It is ready but has not been launched.
+- **09 — Upwork launch attempt:** Project Catalog returned HTTP 403 after account/platform access was revoked. No listing launched; this was a distribution block, not market rejection.
+- **10 — First live market exposure:** r/CreatorServices provided a compliant zero-upfront-cost surface, and Sawsen manually published Experiment #002. It is PREY's first verified live experiment.
 
-The autopsy reopened two candidates for bounded market tests: Square consignor payout packs and YouTube/bodycam SRT correction. Both now have manual test kits; neither experiment has launched. Reopening authorizes a test, not a software build.
+The autopsy reopened two candidates for bounded market tests: Square consignor payout packs and YouTube/bodycam SRT correction. Both have manual test kits. Experiment #001 remains READY — NOT LAUNCHED; Experiment #002 is LIVE. Exposure authorizes observation and a manual money test, not a software build.
 
 ## Current experiment
 
 Experiment #001 offers one manually checked Square Consignor Payout Pack for **US$25**, covering up to 10 consignors and 100 transaction lines. Its demo data is synthetic and clearly labeled. The offer remains **READY — NOT LAUNCHED** pending verification that the intended community permits the post.
 
-Experiment #002 offers manual correction of an existing machine-generated English SRT for up to 20 minutes of noisy police-bodycam/interrogation footage for **US$20**. Its sample is synthetic and clearly labeled. The offer remains **READY — NOT LAUNCHED** for Upwork Project Catalog.
+Experiment #002 offers manual correction of an existing machine-generated English SRT for up to 20 minutes of noisy police-bodycam/interrogation footage for **US$20**, returning a corrected valid SRT and timestamped ambiguity log. Its sample is synthetic and clearly labeled. The offer is **LIVE** on [Reddit — r/CreatorServices](https://www.reddit.com/r/CreatorServices/comments/1wkztah/for_hire_manual_bodycaminterrogation_srt/). Customers remain 0, paid runs remain 0, and revenue remains US$0; live exposure is not market validation or proof of demand.
 
 No customer outcome, market response, or revenue is claimed. See `EXPERIMENT_LEDGER.md` for the approved measurement rules and `MISSION_LEDGER.md` for the factual project history.
 

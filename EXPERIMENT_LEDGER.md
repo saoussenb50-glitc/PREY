@@ -34,12 +34,29 @@ If the surface prohibits the post, requires approval that is not granted, remove
 
 | Field | Value |
 |---|---|
-| Status | **READY — NOT LAUNCHED** |
+| Status | **LIVE** |
 | Offer | Manual correction of one existing machine-generated English SRT |
 | Price | **US$20** |
 | Scope | Up to 20 source-video minutes; corrected SRT + ambiguity log |
-| Surface | Upwork Project Catalog → Video & Audio → Subtitles & Captions |
+| Surface | Reddit — r/CreatorServices |
+| Live URL | <https://www.reddit.com/r/CreatorServices/comments/1wkztah/for_hire_manual_bodycaminterrogation_srt/> |
+| Title | [For Hire] Manual bodycam/interrogation SRT correction — $20 for up to 20 source minutes |
+| Flair | Offering Paid Services (manually confirmed) |
+| Publication | Published manually by Sawsen on 19 September 2026; publicly observed live; exact time not captured |
 | Success signal | At least 1 independent paid manual run |
-| Exposure checkpoint | 7 days or 100 qualified listing views |
+| Exposure checkpoint | 19–26 September 2026 (7 days from publication), or 100 qualified views if Reddit exposes a meaningful usable view metric |
 
-No listing has been created, no buyer has been contacted, and no payment has been requested or received. Full rules are in `mission-08/EXPERIMENT_README.md`.
+### Observed results
+
+| Metric | Observed value |
+|---|---:|
+| Customers | 0 |
+| Paid manual runs | 0 |
+| Revenue | US$0 |
+| Qualified comments | Not recorded |
+| Relevant Reddit messages | Not recorded |
+| Questions about buying | Not recorded |
+| Post views | Not recorded |
+| Demo clicks | Not observable / not recorded |
+
+This is market exposure, not market validation, proof of demand, or a sale. Upvotes, views, comments, and messages are secondary signals and are not equivalent to revenue. The public post states that unclear speech is marked rather than guessed and links to a clearly synthetic demo, not client work. Full scope and safety rules are in `mission-08/EXPERIMENT_README.md`.

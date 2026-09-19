@@ -17,3 +17,13 @@ This is a factual event log. It is a source for later storytelling, not a place 
 - Mission 08 recovered the bodycam-SRT evidence and checked September 2026 conditions. Two current Upwork jobs showed recurring police-bodycam subtitle work at US$10/video and US$1/source-video minute, while generic caption software and services remained crowded.
 - PREY judged one narrow manual wedge experiment-worthy: correcting existing machine-generated English SRTs for noisy bodycam/interrogation footage into validated SRTs with ambiguity logs. It prepared a US$20, up-to-20-minute Upwork Project Catalog test and a clearly synthetic before/after fixture.
 - Experiment #002 is READY — NOT LAUNCHED. No listing was published, no buyer was contacted, no payment was requested, and revenue remains $0.
+
+## 20 September 2026
+
+- PREY's early missions repeatedly killed candidates during desk research. The Mission 05 Autopsy changed the system toward bounded human and money tests rather than more broad research.
+- Experiment #001, the Square Consignor Payout Pack, was prepared but never exposed because browser execution infrastructure blocked publication. It remains READY — NOT LAUNCHED and was not rejected by the market.
+- Experiment #002 survived the gates as a narrow manual bodycam/interrogation SRT-correction offer.
+- Mission 09 attempted to distribute Experiment #002 through Upwork Project Catalog. Although Upwork was logged in, account/platform access was revoked and Project Catalog returned HTTP 403. No listing launched and no money was spent; this was distribution failure, not market rejection.
+- PREY changed the distribution surface rather than killing the offer. Mission 10 identified r/CreatorServices as a compliant zero-upfront-cost path and prepared a compliant post.
+- Sawsen manually published the final r/CreatorServices post. Work did not click Post. Experiment #002 became LIVE and PREY recorded its first real market exposure.
+- The event is exposure only, not validation or a sale. Customers remain 0, paid runs remain 0, and revenue remains US$0.

@@ -1,6 +1,14 @@
 # PREY State
 
-Mission 08 is complete as of 19 September 2026. YouTube/bodycam SRT correction passed the gates as one narrow manual service: correction of an existing machine-generated English SRT for noisy police-bodycam/interrogation footage, returning a validated SRT and ambiguity log. Experiment #002 is **READY — NOT LAUNCHED** at US$20 for up to 20 source-video minutes on Upwork Project Catalog. No listing was created, no buyer was contacted, and no market exposure occurred. Full evidence and scope are in `mission-08/`.
+Mission 10 is complete as of 20 September 2026. Experiment #002 received PREY's first verified live market exposure when Sawsen manually published the prepared offer in Reddit's r/CreatorServices. The public post is <https://www.reddit.com/r/CreatorServices/comments/1wkztah/for_hire_manual_bodycaminterrogation_srt/>. It offers manual correction of an existing machine-generated English SRT for **US$20** for up to **20 source-video minutes**, returning a corrected valid SRT and timestamped ambiguity log. The linked sample is synthetic, not client work, and the post says unclear speech is marked rather than guessed.
+
+Experiment #002 is **LIVE**, but this is exposure only: customers **0**, paid runs **0**, and revenue **US$0**. It is not market validation, proof of demand, or a sale. The test window is 19–26 September 2026 (7 days from publication), or 100 qualified views if Reddit exposes a meaningful usable view metric. The primary success signal is at least one paid manual run.
+
+Mission 09 attempted to launch Experiment #002 through Upwork Project Catalog. Upwork was logged in, but account/platform access was revoked and Project Catalog returned HTTP 403. No listing was launched and no money was spent. Mission 09 was an execution/distribution block, not market rejection. Mission 10 found r/CreatorServices as a compliant zero-upfront-cost surface; PREY prepared the compliant post and Sawsen performed the final publication manually.
+
+Experiment #001 remains **READY — NOT LAUNCHED**. Do not launch it during Experiment #002's test window. Current counters: verified autonomous agents **0**; apps **0**; dashboards **0**; software products **0**; customers **0**; paid runs **0**; revenue **US$0**; additional cash spend **US$0**; market experiments prepared **2**; market experiments live **1**.
+
+At Mission 08's completion on 19 September 2026, YouTube/bodycam SRT correction had passed the gates as one narrow manual service and Experiment #002 was **READY — NOT LAUNCHED** for Upwork Project Catalog. That status was superseded by Mission 10's live Reddit exposure. Full evidence and scope are in `mission-08/`.
 
 Experiment #001 remains **READY — NOT LAUNCHED**. Its launch was blocked by browser execution infrastructure, not rejected by the market.
 
@@ -12,9 +20,9 @@ This synchronization changed project documentation only. It did not alter the Mi
 
 Mission 06 is complete as of 19 September 2026. The manual Square payout-pack launch kit is ready in `mission-06/`; it has not been published. Full decision notes are in `evidence/first-blood-square-01.md`.
 
-## Mission 06 ledger
+## Mission 06 ledger (historical snapshot at Mission 06 completion)
 
-- market experiments launched: **0**
+- market experiments launched at that time: **0**
 - paid customers: **0**
 - revenue: **$0**
 - products built: **0**
@@ -42,7 +50,7 @@ PREY v2 uses the finite loop:
 
 Before exposure, allow at most 4 hours of research, 12 substantive sources, 3 compared candidates, and 2 hours of demo/manual-aid work. Reusable software requires two independent paid deliveries of substantially the same input/output unless a client prepays development.
 
-## Candidate status
+## Candidate status at Mission 05 completion
 
 - **REOPEN — Square consignor payout packs.** Reopen for one bounded public exposure and paid manual-run test only. Do not build software.
 - **REOPEN — YouTube/bodycam SRT correction.** Eligible for a later productized-service test because repeat spend is verified and human judgment may be the product. It is not the next mission.

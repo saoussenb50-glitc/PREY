@@ -1,6 +1,8 @@
 # Experiment #002 — Bodycam SRT Rescue
 
-Status: **READY — NOT LAUNCHED**
+Status: **LIVE**
+
+Sawsen manually published the prepared offer in Reddit's r/CreatorServices on 19 September 2026: <https://www.reddit.com/r/CreatorServices/comments/1wkztah/for_hire_manual_bodycaminterrogation_srt/>. This is the first verified live market exposure for PREY. It is not market validation, proof of demand, or a sale; customers, paid runs, and revenue remain 0, 0, and US$0.
 
 For **US$20**, manually correct one existing machine-generated English SRT against up to **20 minutes** of police-bodycam or interrogation footage and return an upload-ready SRT plus a timestamped ambiguity log within **48 hours** of complete inputs. The price follows the observed US$1/source-minute bodycam job and is an experiment price, not a validated rate.
 
@@ -18,7 +20,7 @@ Delivered outputs: `corrected.srt`, `ambiguity-log.csv`, and `qa-checklist.md`.
 
 The clearly synthetic fixture in `sample/` demonstrates misheard terms, speaker confusion, timing overlap, censorship, and honest ambiguity handling. It is not client work or a testimonial.
 
-## Exact Upwork Project Catalog copy
+## Original prepared Upwork Project Catalog copy
 
 **Title:** I will correct noisy police bodycam SRT captions in English
 
@@ -40,9 +42,9 @@ Requirements shown before purchase: video length; existing SRT; footage/link; ri
 
 ## Success and 7-day rule
 
-Start the clock only when the listing is approved and visible; record its URL and UTC time.
+The live test window is 19–26 September 2026 (7 days from publication), or 100 qualified views if Reddit exposes a meaningful usable view metric. Record only observed metrics. Upvotes, views, comments, and messages are secondary signals, not revenue.
 
 - **Continue:** one independent qualified buyer purchases within 7 days. Deliver manually; do not build. Two independent paid deliveries with substantially identical inputs/outputs are still required before reusable automation.
-- **Kill offer:** three qualified prospects receive the full offer and none buys, or 100 qualified listing views produce no purchase.
-- **Distribution failure:** after 7 days the listing is rejected, unavailable, or too weakly exposed to test. Do not call that demand failure.
+- **Kill offer:** three qualified prospects receive the full offer and none buys, or 100 qualified views produce no purchase.
+- **Distribution failure:** after 7 days the post is unavailable or too weakly exposed to test. Do not call that demand failure.
 - Favorites, generic messages, acquaintance purchases, refunds, and promises are not success.
