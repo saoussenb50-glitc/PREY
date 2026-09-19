@@ -1,0 +1,12 @@
+SYNTHETIC DATA — NOT CUSTOMER INFORMATION
+Consignor ID,Consignor name,SKU prefix,Consignor share %,Payout cadence,Payment reference
+C001,Alder & Ash,AA-,0.6,Monthly,ACH ending 0182
+C002,Blue Finch Studio,BF-,0.6,Monthly,Check
+C003,Cedar Thread,CT-,0.6,Monthly,ACH ending 4421
+C004,Dune Ceramics,DC-,0.6,Monthly,ACH ending 9033
+C005,Elm Paper Co.,EP-,0.6,Monthly,Check
+C006,Foxglove Goods,FG-,0.7,Monthly,ACH ending 2210
+C007,Golden Hour Glass,GH-,0.7,Monthly,Check
+C008,Harbor Loom,HL-,0.7,Monthly,ACH ending 7815
+C009,Indigo North,IN-,0.7,Monthly,ACH ending 6690
+C010,Juniper Metalworks,JM-,0.7,Monthly,Check

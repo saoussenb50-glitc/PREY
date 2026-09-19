@@ -1,0 +1,7 @@
+SYNTHETIC DEMO — DRAFT PAYOUT STATEMENT
+Consignor,Juniper Metalworks
+Period,2026-08-01 to 2026-08-31
+Date,Transaction,SKU,Item,Qty,Gross,Discount,Net sales,Share %,Payout,Note
+2026-08-11 12:12,SQ-1009,JM-031,Brass earrings,1,52,0,52,0.7,36.4,
+2026-08-27 12:58,SQ-1017,JM-034,Hammered cuff,1,68,8,60,0.7,42,$8 line discount
+,,,STATEMENT TOTAL,,,,112,0.7,78.39999999999999,Owner approval required

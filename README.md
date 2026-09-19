@@ -1,0 +1,58 @@
+# PREY
+
+PREY is a zero-additional-budget experiment for finding and validating tiny business opportunities before building software.
+
+Its operating loop is:
+
+**evidence → adversarial kill → market exposure → human/money signal → build or kill**
+
+The project deliberately separates research from proof. Complaints, competitor pricing, and public discussions can justify a test, but they do not count as customer demand, payment, or revenue. PREY builds reusable software only after market evidence warrants it.
+
+## Current scoreboard
+
+| Measure | Current value |
+|---|---:|
+| Missions completed | 01–06 |
+| Setup/control mission | 00 |
+| Verified autonomous sub-agents spawned | 0 |
+| Customer-facing apps built | 0 |
+| Dashboards built | 0 |
+| Software products built | 0 |
+| Market experiments launched | 0 |
+| Paid customers | 0 |
+| Revenue | $0 |
+| Additional cash spent | $0 |
+| Market-ready experiment kits | 1 |
+
+## Mission timeline
+
+- **00 — Control Layer:** established the project controls and zero-additional-budget constraint.
+- **01 — Hunger Hunt:** examined an initial set of tiny business opportunities.
+- **02 — Patreon Blood Test:** **KILLED** after adversarial incumbent review.
+- **03 — Dark Forest:** returned **0 survivors**.
+- **04 — Follow the Money:** returned **0 survivors**.
+- **05 — Autopsy:** diagnosed PREY v1 as over-researching and rejecting untested service and segment opportunities too early.
+- **06 — First Blood:** prepared a Square manual market-test kit. It is ready but has not been launched.
+
+The autopsy reopened two candidates for bounded market tests: Square consignor payout packs and YouTube/bodycam SRT correction. Only Square is entering the first experiment. Reopening authorizes a test, not a software build.
+
+## Current experiment
+
+Experiment #001 offers one manually checked Square Consignor Payout Pack for **US$25**, covering up to 10 consignors and 100 transaction lines. Its demo data is synthetic and clearly labeled. The offer remains **READY — NOT LAUNCHED** pending verification that the intended community permits the post.
+
+No customer outcome, market response, or revenue is claimed. See `EXPERIMENT_LEDGER.md` for the approved measurement rules and `MISSION_LEDGER.md` for the factual project history.
+
+## Project records
+
+- `STATE.md` — current strategic state and next boundary.
+- `MISSION_LEDGER.md` — verified mission history.
+- `AGENT_REGISTRY.md` — actual autonomous agents, kept separate from mission roles and story language.
+- `BUILD_LEDGER.md` — infrastructure, fixtures, demos, and product counts.
+- `EXPERIMENT_LEDGER.md` — market experiments and observed signals.
+- `STORY_LOG.md` — factual events suitable for later storytelling.
+- `evidence/` — mission evidence and decisions.
+- `mission-06/` — the unlaunched Square experiment kit and synthetic demo.
+
+## Operating boundaries
+
+PREY does not count research roles, review processes, or dramatic mission names as autonomous agents. It does not count synthetic fixtures, scripts, spreadsheets, or launch copy as customer-facing software products. Views, inquiries, customers, payments, and revenue are recorded only after they are observed.

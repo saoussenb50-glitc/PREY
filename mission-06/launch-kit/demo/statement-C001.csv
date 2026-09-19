@@ -1,0 +1,7 @@
+SYNTHETIC DEMO — DRAFT PAYOUT STATEMENT
+Consignor,Alder & Ash
+Period,2026-08-01 to 2026-08-31
+Date,Transaction,SKU,Item,Qty,Gross,Discount,Net sales,Share %,Payout,Note
+2026-08-03 10:14,SQ-1001,AA-101,Linen tote,1,38,0,38,0.6,22.8,
+2026-08-14 09:47,SQ-1010,AA-104,Canvas pouch,2,44,4,40,0.6,24,$4 order discount allocated to line
+,,,STATEMENT TOTAL,,,,78,0.6,46.8,Owner approval required

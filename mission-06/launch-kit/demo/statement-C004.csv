@@ -1,0 +1,7 @@
+SYNTHETIC DEMO — DRAFT PAYOUT STATEMENT
+Consignor,Dune Ceramics
+Period,2026-08-01 to 2026-08-31
+Date,Transaction,SKU,Item,Qty,Gross,Discount,Net sales,Share %,Payout,Note
+2026-08-05 11:41,SQ-1003,DC-018,Speckled bowl,2,56,0,56,0.6,33.6,
+2026-08-16 11:05,SQ-1012,DC-018,Speckled bowl,-1,-28,0,-28,0.6,-16.8,Refund of one unit from SQ-1003
+,,,STATEMENT TOTAL,,,,28,0.6,16.8,Owner approval required
