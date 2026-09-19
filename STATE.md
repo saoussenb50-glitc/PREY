@@ -1,5 +1,7 @@
 # PREY State
 
+On 19 September 2026, the existing PREY Git history through commit `053bac2` was published on the public GitHub repository <https://github.com/saoussenb50-glitc/PREY>, with local `main` synchronized to `origin/main`. This was project-record publication only: the Reddit experiment was not published, no users were contacted, and no market experiment was launched.
+
 Mission 06.5 project synchronization is complete as of 19 September 2026. The public project description and factual registries now live in `README.md`, `AGENT_REGISTRY.md`, `MISSION_LEDGER.md`, `BUILD_LEDGER.md`, `EXPERIMENT_LEDGER.md`, and `STORY_LOG.md`.
 
 This synchronization changed project documentation only. It did not alter the Mission 06 offer or demo, launch an experiment, contact a user, create a product, or generate a money signal.

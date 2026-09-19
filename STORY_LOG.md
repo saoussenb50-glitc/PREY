@@ -12,3 +12,4 @@ This is a factual event log. It is a source for later storytelling, not a place 
 - Two candidates were reopened for bounded tests: Square consignor payout packs and YouTube/bodycam SRT correction. Only Square was selected for the first experiment.
 - PREY prepared its first manual market experiment: a US$25 Square Consignor Payout Pack, supported by a clearly synthetic demo and a safety-bounded launch kit.
 - The experiment was not launched. Nothing was published, no users were contacted, no payment was requested or received, and revenue remained $0.
+- PREY's existing Git history through commit `053bac2`, including its README and factual ledgers, was published to the public GitHub repository <https://github.com/saoussenb50-glitc/PREY> on branch `main`. This repository publication did not publish the Reddit experiment, contact users, or launch a market experiment.
