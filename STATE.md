@@ -1,5 +1,9 @@
 # PREY State
 
+Mission 08 is complete as of 19 September 2026. YouTube/bodycam SRT correction passed the gates as one narrow manual service: correction of an existing machine-generated English SRT for noisy police-bodycam/interrogation footage, returning a validated SRT and ambiguity log. Experiment #002 is **READY — NOT LAUNCHED** at US$20 for up to 20 source-video minutes on Upwork Project Catalog. No listing was created, no buyer was contacted, and no market exposure occurred. Full evidence and scope are in `mission-08/`.
+
+Experiment #001 remains **READY — NOT LAUNCHED**. Its launch was blocked by browser execution infrastructure, not rejected by the market.
+
 On 19 September 2026, the existing PREY Git history through commit `053bac2` was published on the public GitHub repository <https://github.com/saoussenb50-glitc/PREY>, with local `main` synchronized to `origin/main`. This was project-record publication only: the Reddit experiment was not published, no users were contacted, and no market experiment was launched.
 
 Mission 06.5 project synchronization is complete as of 19 September 2026. The public project description and factual registries now live in `README.md`, `AGENT_REGISTRY.md`, `MISSION_LEDGER.md`, `BUILD_LEDGER.md`, `EXPERIMENT_LEDGER.md`, and `STORY_LOG.md`.

@@ -29,3 +29,17 @@ Market metrics are recorded only after observation. Prepared assets and intended
 The clock starts only when the approved post is published. No views, inquiries, customers, or revenue may be inferred from research, demo preparation, or community membership.
 
 If the surface prohibits the post, requires approval that is not granted, removes it, or cannot provide adequate exposure, record a distribution failure rather than inventing an offer result. The full approved definitions and boundaries remain in `mission-06/EXPERIMENT_README.md` and must not be changed by this ledger.
+
+## Experiment #002 — Bodycam SRT Rescue
+
+| Field | Value |
+|---|---|
+| Status | **READY — NOT LAUNCHED** |
+| Offer | Manual correction of one existing machine-generated English SRT |
+| Price | **US$20** |
+| Scope | Up to 20 source-video minutes; corrected SRT + ambiguity log |
+| Surface | Upwork Project Catalog → Video & Audio → Subtitles & Captions |
+| Success signal | At least 1 independent paid manual run |
+| Exposure checkpoint | 7 days or 100 qualified listing views |
+
+No listing has been created, no buyer has been contacted, and no payment has been requested or received. Full rules are in `mission-08/EXPERIMENT_README.md`.

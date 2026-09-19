@@ -1,5 +1,11 @@
 # Next Action
 
+## Mission 09 — Launch one prepared experiment
+
+Launch exactly one prepared experiment; do not launch both simultaneously and do not build software. Preferred next action: create the Experiment #002 Upwork Project Catalog listing from `mission-08/EXPERIMENT_README.md`, attach the clearly synthetic sample, and start the 7-day/100-qualified-view clock only when the listing is approved and visible. Record rejection or inadequate exposure as distribution failure, not market rejection.
+
+Experiment #001 remains READY — NOT LAUNCHED and may be launched later when its rules-permitting surface and browser execution are available.
+
 ## Mission 06 — Square Payout Reality Test
 
 Run exactly one market experiment. Do not hunt for more ideas and do not build a product.

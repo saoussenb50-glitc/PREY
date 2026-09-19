@@ -33,12 +33,16 @@ The project deliberately separates research from proof. Complaints, competitor p
 - **04 — Follow the Money:** returned **0 survivors**.
 - **05 — Autopsy:** diagnosed PREY v1 as over-researching and rejecting untested service and segment opportunities too early.
 - **06 — First Blood:** prepared a Square manual market-test kit. It is ready but has not been launched.
+- **07 — Square launch attempt:** browser execution infrastructure blocked publication; the market did not reject the offer.
+- **08 — Second Chamber:** revalidated bodycam SRT correction and prepared a narrow manual test. It is ready but has not been launched.
 
-The autopsy reopened two candidates for bounded market tests: Square consignor payout packs and YouTube/bodycam SRT correction. Only Square is entering the first experiment. Reopening authorizes a test, not a software build.
+The autopsy reopened two candidates for bounded market tests: Square consignor payout packs and YouTube/bodycam SRT correction. Both now have manual test kits; neither experiment has launched. Reopening authorizes a test, not a software build.
 
 ## Current experiment
 
 Experiment #001 offers one manually checked Square Consignor Payout Pack for **US$25**, covering up to 10 consignors and 100 transaction lines. Its demo data is synthetic and clearly labeled. The offer remains **READY — NOT LAUNCHED** pending verification that the intended community permits the post.
+
+Experiment #002 offers manual correction of an existing machine-generated English SRT for up to 20 minutes of noisy police-bodycam/interrogation footage for **US$20**. Its sample is synthetic and clearly labeled. The offer remains **READY — NOT LAUNCHED** for Upwork Project Catalog.
 
 No customer outcome, market response, or revenue is claimed. See `EXPERIMENT_LEDGER.md` for the approved measurement rules and `MISSION_LEDGER.md` for the factual project history.
 

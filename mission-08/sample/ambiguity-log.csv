@@ -1,0 +1,5 @@
+timestamp,original,final,reason
+00:00:00,"were I can sea","where I can see","Audible homophone correction"
+00:00:03,"mail by the read sedan","male by the red sedan","Audible context correction"
+00:00:06,"[profanity]","[BLEEP]","Applied supplied censor format"
+00:00:12,"[guessed surname]","[inaudible]","Surname not reliably audible; guessing prohibited"

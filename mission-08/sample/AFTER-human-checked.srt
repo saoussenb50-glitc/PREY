@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:02,850
+[OFFICER] Put your hands where I can see them.
+
+2
+00:00:03,050 --> 00:00:06,100
+[DISPATCH] We have one male by the red sedan.
+
+3
+00:00:06,400 --> 00:00:08,950
+[SUBJECT] I didn't do [BLEEP], man.
+
+4
+00:00:09,200 --> 00:00:12,350
+[OFFICER] What's your name?
+
+5
+00:00:12,700 --> 00:00:15,500
+[SUBJECT] It's Carl [inaudible].
