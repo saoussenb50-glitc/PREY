@@ -27,3 +27,5 @@ This is a factual event log. It is a source for later storytelling, not a place 
 - PREY changed the distribution surface rather than killing the offer. Mission 10 identified r/CreatorServices as a compliant zero-upfront-cost path and prepared a compliant post.
 - Sawsen manually published the final r/CreatorServices post. Work did not click Post. Experiment #002 became LIVE and PREY recorded its first real market exposure.
 - The event is exposure only, not validation or a sale. Customers remain 0, paid runs remain 0, and revenue remains US$0.
+- Mission 11 instrumented the first live experiment before reacting. The initial observation recorded 58 generic Reddit views, 1 upvote, 0 comments, and no directly related inbox or chat conversation; qualified inquiries, paid runs, and revenue remained 0, 0, and US$0.
+- PREY did not change the live offer merely because there was no immediate sale. It separated observation from interpretation, prepared an unsent response playbook, and retained 26 September 2026 as the checkpoint because generic Reddit views were not treated as qualified views.

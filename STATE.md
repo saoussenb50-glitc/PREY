@@ -1,5 +1,9 @@
 # PREY State
 
+Mission 11 is complete as of 20 September 2026. PREY now has a durable observation protocol for Experiment #002 in `EXPERIMENT_SIGNAL_LEDGER.md` and an unsent inbound-response playbook in `mission-11/RESPONSE_PLAYBOOK.md`. This adds no app, dashboard, software product, automation, or autonomous agent.
+
+The baseline observed at 2026-09-20 01:42:50 +02:00 was: post **LIVE**; 58 generic Reddit platform views; qualified views unavailable; 1 upvote with a 100% ratio; 0 comments; 0 shares; 0 awards; no legacy-inbox messages; and no Reddit Chat conversations. Qualified inquiries **0**, buying-intent conversations **0**, paid inquiries **0**, paid runs **0**, and revenue **US$0**. The 58 platform views are not classified as qualified views, so the experiment has not reached the 100-qualified-view checkpoint.
+
 Mission 10 is complete as of 20 September 2026. Experiment #002 received PREY's first verified live market exposure when Sawsen manually published the prepared offer in Reddit's r/CreatorServices. The public post is <https://www.reddit.com/r/CreatorServices/comments/1wkztah/for_hire_manual_bodycaminterrogation_srt/>. It offers manual correction of an existing machine-generated English SRT for **US$20** for up to **20 source-video minutes**, returning a corrected valid SRT and timestamped ambiguity log. The linked sample is synthetic, not client work, and the post says unclear speech is marked rather than guessed.
 
 Experiment #002 is **LIVE**, but this is exposure only: customers **0**, paid runs **0**, and revenue **US$0**. It is not market validation, proof of demand, or a sale. The test window is 19–26 September 2026 (7 days from publication), or 100 qualified views if Reddit exposes a meaningful usable view metric. The primary success signal is at least one paid manual run.

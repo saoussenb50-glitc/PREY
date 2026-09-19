@@ -12,7 +12,7 @@ The project deliberately separates research from proof. Complaints, competitor p
 
 | Measure | Current value |
 |---|---:|
-| Missions completed | 01–10 (including 06.5) |
+| Missions completed | 01–11 (including 06.5) |
 | Setup/control mission | 00 |
 | Verified autonomous sub-agents spawned | 0 |
 | Apps built | 0 |
@@ -39,6 +39,7 @@ The project deliberately separates research from proof. Complaints, competitor p
 - **08 — Second Chamber:** revalidated bodycam SRT correction and prepared a narrow manual test. It is ready but has not been launched.
 - **09 — Upwork launch attempt:** Project Catalog returned HTTP 403 after account/platform access was revoked. No listing launched; this was a distribution block, not market rejection.
 - **10 — First live market exposure:** r/CreatorServices provided a compliant zero-upfront-cost surface, and Sawsen manually published Experiment #002. It is PREY's first verified live experiment.
+- **11 — Watch the Trap:** recorded the live baseline, defined a signal taxonomy and decision checkpoints, and prepared an unsent inbound-response playbook without changing the offer.
 
 The autopsy reopened two candidates for bounded market tests: Square consignor payout packs and YouTube/bodycam SRT correction. Both have manual test kits. Experiment #001 remains READY — NOT LAUNCHED; Experiment #002 is LIVE. Exposure authorizes observation and a manual money test, not a software build.
 

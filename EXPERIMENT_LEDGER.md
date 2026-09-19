@@ -53,10 +53,14 @@ If the surface prohibits the post, requires approval that is not granted, remove
 | Customers | 0 |
 | Paid manual runs | 0 |
 | Revenue | US$0 |
-| Qualified comments | Not recorded |
-| Relevant Reddit messages | Not recorded |
-| Questions about buying | Not recorded |
-| Post views | Not recorded |
+| Platform views | 58 — generic Reddit views, not qualified views |
+| Qualified views | Unavailable |
+| Upvotes | 1 (100% ratio) |
+| Comments / qualified comments | 0 / 0 |
+| Relevant Reddit messages | 0 observed |
+| Qualified inquiries | 0 |
+| Buying-intent conversations | 0 |
+| Paid inquiries | 0 |
 | Demo clicks | Not observable / not recorded |
 
-This is market exposure, not market validation, proof of demand, or a sale. Upvotes, views, comments, and messages are secondary signals and are not equivalent to revenue. The public post states that unclear speech is marked rather than guessed and links to a clearly synthetic demo, not client work. Full scope and safety rules are in `mission-08/EXPERIMENT_README.md`.
+Baseline observed at 2026-09-20 01:42:50 +02:00. Reddit Post Insights also showed 0 shares and 0 awards; the legacy inbox was empty and Reddit Chat showed no conversations. This is market exposure, not market validation, proof of demand, or a sale. Upvotes, views, comments, and messages are secondary signals and are not equivalent to revenue. Full timestamped evidence and interpretation are in `EXPERIMENT_SIGNAL_LEDGER.md`; scope and safety rules are in `mission-08/EXPERIMENT_README.md`.
