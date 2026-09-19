@@ -2,6 +2,13 @@
 
 This is a factual event log. It is a source for later storytelling, not a place to invent outcomes, agents, users, or revenue.
 
+## 20 September 2026 — Mission 12
+
+- PREY converted its accumulated dead ends into durable institutional memory while its first live experiment continued untouched.
+- `GRAVEYARD.md` consolidated 29 distinct candidates from 33 Mission 01–04 examination records, separating 27 closed desk-research kills from 0 market kills and recording two execution blocks without calling them demand failures.
+- `PATTERN_MAP.md` tied recurring failure patterns to named candidates and preserved the shift from research-heavy PREY v1 to exposure-led PREY v2.
+- The mission created knowledge assets only: no new exposure, signal, app, dashboard, software, automation, or agent. Experiment #001 stayed READY — NOT LAUNCHED; Experiment #002 stayed LIVE and unchanged at 58 generic views, 1 upvote, 0 comments, 0 shares, 0 awards, 0 qualified inquiries, 0 paid runs, and US$0 revenue.
+
 ## 19 September 2026
 
 - PREY ran its initial opportunity hunt. Mission 01 examined 10 candidates, advanced three, and built no product.

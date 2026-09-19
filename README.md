@@ -12,7 +12,7 @@ The project deliberately separates research from proof. Complaints, competitor p
 
 | Measure | Current value |
 |---|---:|
-| Missions completed | 01–11 (including 06.5) |
+| Missions completed | 01–12 (including 06.5) |
 | Setup/control mission | 00 |
 | Verified autonomous sub-agents spawned | 0 |
 | Apps built | 0 |
@@ -40,6 +40,7 @@ The project deliberately separates research from proof. Complaints, competitor p
 - **09 — Upwork launch attempt:** Project Catalog returned HTTP 403 after account/platform access was revoked. No listing launched; this was a distribution block, not market rejection.
 - **10 — First live market exposure:** r/CreatorServices provided a compliant zero-upfront-cost surface, and Sawsen manually published Experiment #002. It is PREY's first verified live experiment.
 - **11 — Watch the Trap:** recorded the live baseline, defined a signal taxonomy and decision checkpoints, and prepared an unsent inbound-response playbook without changing the offer.
+- **12 — The Graveyard:** consolidated 29 deduplicated candidates into a factual graveyard and mapped PREY-specific failure patterns without changing the live experiment.
 
 The autopsy reopened two candidates for bounded market tests: Square consignor payout packs and YouTube/bodycam SRT correction. Both have manual test kits. Experiment #001 remains READY — NOT LAUNCHED; Experiment #002 is LIVE. Exposure authorizes observation and a manual money test, not a software build.
 
@@ -59,6 +60,8 @@ No customer outcome, market response, or revenue is claimed. See `EXPERIMENT_LED
 - `BUILD_LEDGER.md` — infrastructure, fixtures, demos, and product counts.
 - `EXPERIMENT_LEDGER.md` — market experiments and observed signals.
 - `STORY_LOG.md` — factual events suitable for later storytelling.
+- `GRAVEYARD.md` — deduplicated candidate registry, taxonomy, counting method, and future-hunt guardrails.
+- `PATTERN_MAP.md` — recurring PREY failure patterns and the v1-to-v2 methodological transition.
 - `evidence/` — mission evidence and decisions.
 - `mission-06/` — the unlaunched Square experiment kit and synthetic demo.
 

@@ -1,5 +1,9 @@
 # PREY State
 
+Mission 12 is complete as of 20 September 2026. `GRAVEYARD.md` consolidates the 29 distinct candidates established by Mission 05 from 33 Mission 01–04 examination records, and `PATTERN_MAP.md` records recurring evidence-backed failure patterns and the PREY v1-to-v2 change. The current registry contains 27 closed desk-research kills, 0 market kills, 2 historical execution blocks, 1 historical reserve (Square, later reopened), and 2 reopened candidates. This is a documentation result, not new market evidence.
+
+Experiment #001 remains **READY — NOT LAUNCHED**. Experiment #002 remains **LIVE — UNCHANGED**. Mission 12 did not edit, repost, promote, comment on, message around, or otherwise disturb the live offer. Its baseline remains 58 generic Reddit views, 1 upvote, 0 comments, 0 shares, 0 awards, 0 qualified inquiries, 0 buying-intent conversations, 0 paid runs, and **US$0** revenue; qualified views remain unavailable and the window remains 19–26 September 2026.
+
 Mission 11 is complete as of 20 September 2026. PREY now has a durable observation protocol for Experiment #002 in `EXPERIMENT_SIGNAL_LEDGER.md` and an unsent inbound-response playbook in `mission-11/RESPONSE_PLAYBOOK.md`. This adds no app, dashboard, software product, automation, or autonomous agent.
 
 The baseline observed at 2026-09-20 01:42:50 +02:00 was: post **LIVE**; 58 generic Reddit platform views; qualified views unavailable; 1 upvote with a 100% ratio; 0 comments; 0 shares; 0 awards; no legacy-inbox messages; and no Reddit Chat conversations. Qualified inquiries **0**, buying-intent conversations **0**, paid inquiries **0**, paid runs **0**, and revenue **US$0**. The 58 platform views are not classified as qualified views, so the experiment has not reached the 100-qualified-view checkpoint.
