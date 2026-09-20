@@ -2,6 +2,13 @@
 
 This is a factual event log. It is a source for later storytelling, not a place to invent outcomes, agents, users, or revenue.
 
+## 20 September 2026 — Mission 13
+
+- PREY examined its own graveyard and rewrote its operating rules while the first live experiment continued untouched.
+- `PREY_PROTOCOL_V2.md` made **OBSERVE → FORM BET → CHEAP EXPOSURE → HUMAN SIGNAL → MONEY TEST → BUILD / KILL** canonical and defined bounded research, distribution, build, agent, evidence, experiment-isolation, and scoreboard rules.
+- `MISSION_TEMPLATE.md` converted those boundaries into a compact reusable mission contract.
+- No new market result occurred. Experiment #001 remained READY — NOT LAUNCHED; Experiment #002 remained LIVE — UNCHANGED at its last verified baseline. Customers, paid runs, and revenue remained 0, 0, and US$0; verified agents, apps, dashboards, and software products remained 0.
+
 ## 20 September 2026 — Mission 12
 
 - PREY converted its accumulated dead ends into durable institutional memory while its first live experiment continued untouched.

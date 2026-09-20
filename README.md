@@ -2,9 +2,9 @@
 
 PREY is a zero-additional-budget experiment for finding and validating tiny business opportunities before building software.
 
-Its operating loop is:
+Its canonical PREY V2 operating loop is:
 
-**evidence → adversarial kill → market exposure → human/money signal → build or kill**
+**OBSERVE → FORM BET → CHEAP EXPOSURE → HUMAN SIGNAL → MONEY TEST → BUILD / KILL**
 
 The project deliberately separates research from proof. Complaints, competitor pricing, and public discussions can justify a test, but they do not count as customer demand, payment, or revenue. PREY builds reusable software only after market evidence warrants it.
 
@@ -12,7 +12,7 @@ The project deliberately separates research from proof. Complaints, competitor p
 
 | Measure | Current value |
 |---|---:|
-| Missions completed | 01–12 (including 06.5) |
+| Missions completed | 01–13 (including 06.5) |
 | Setup/control mission | 00 |
 | Verified autonomous sub-agents spawned | 0 |
 | Apps built | 0 |
@@ -41,6 +41,7 @@ The project deliberately separates research from proof. Complaints, competitor p
 - **10 — First live market exposure:** r/CreatorServices provided a compliant zero-upfront-cost surface, and Sawsen manually published Experiment #002. It is PREY's first verified live experiment.
 - **11 — Watch the Trap:** recorded the live baseline, defined a signal taxonomy and decision checkpoints, and prepared an unsent inbound-response playbook without changing the offer.
 - **12 — The Graveyard:** consolidated 29 deduplicated candidates into a factual graveyard and mapped PREY-specific failure patterns without changing the live experiment.
+- **13 — Rewrite the Rules:** formalized PREY V2, its research/distribution/build/agent gates, evidence labels, scoreboard, and reusable mission template while Experiment #002 continued unchanged.
 
 The autopsy reopened two candidates for bounded market tests: Square consignor payout packs and YouTube/bodycam SRT correction. Both have manual test kits. Experiment #001 remains READY — NOT LAUNCHED; Experiment #002 is LIVE. Exposure authorizes observation and a manual money test, not a software build.
 
@@ -62,6 +63,8 @@ No customer outcome, market response, or revenue is claimed. See `EXPERIMENT_LED
 - `STORY_LOG.md` — factual events suitable for later storytelling.
 - `GRAVEYARD.md` — deduplicated candidate registry, taxonomy, counting method, and future-hunt guardrails.
 - `PATTERN_MAP.md` — recurring PREY failure patterns and the v1-to-v2 methodological transition.
+- `PREY_PROTOCOL_V2.md` — canonical operating loop, gates, evidence labels, decision rules, and scoreboard specification.
+- `MISSION_TEMPLATE.md` — compact required structure for future missions.
 - `evidence/` — mission evidence and decisions.
 - `mission-06/` — the unlaunched Square experiment kit and synthetic demo.
 
