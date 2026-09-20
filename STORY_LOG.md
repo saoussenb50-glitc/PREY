@@ -2,6 +2,12 @@
 
 This is a factual event log. It is a source for later storytelling, not a place to invent outcomes, agents, users, or revenue.
 
+## 20 September 2026 — Mission 16
+
+- PREY added internal SQLite-backed Core and Arena infrastructure with seven dispatchable deterministic local roles.
+- One INTERNAL REPLAY dispatched historical bodycam SRT evidence through H-01 and J-01, persisted the lifecycle, and retained the existing no-market-verdict classification.
+- No external research, live-experiment change, customer, paid run, revenue, buying intent, or human signal occurred. The local roles are not autonomous external workers.
+
 ## 20 September 2026 — Mission 15
 
 - PREY performed a synthetic internal fulfillment dry run while its first live market test continued untouched.

@@ -1,5 +1,19 @@
 # Agent Registry
 
+Mission 16 implements seven **executable registered local roles** in `src/core.js`. They are deterministic, bounded handlers and are not autonomous external workers.
+
+**Current verified autonomous external workers: 0. Current executable registered local roles: 7.**
+
+| ID | Name | Role | Execution boundary | Status |
+|---|---|---|---|---|
+| P-00 | MAIN PREDATOR | bounded dispatch/orchestration | Local deterministic handler; no external action | READY |
+| H-01 | HUNTER | candidate review | Local deterministic handler; no external research | READY |
+| H-02 | MONEY HUNTER | money-evidence review | Local deterministic handler | READY |
+| D-01 | DISTRIBUTION SCOUT | distribution review | Local deterministic handler | READY |
+| J-01 | JUDGE | evidence-bound judgment | Local deterministic handler | READY |
+| B-01 | BUILDER | internal build planning | Local deterministic handler | READY |
+| Q-01 | QA PREDATOR | internal output QA | Local deterministic handler | READY |
+
 This registry tracks verified independent autonomous agents, not research roles, review lenses, mission titles, or story characters.
 
 **Current verified autonomous agents: 0**

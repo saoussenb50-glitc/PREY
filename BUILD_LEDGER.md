@@ -1,5 +1,7 @@
 # Build Ledger
 
+Mission 16 adds `src/core.js`, `src/server.js`, the local SQLite-backed PREY Arena, and seven executable local role handlers. This is internal infrastructure, not customer-facing software; it adds zero autonomous external workers and does not alter market results.
+
 This ledger distinguishes project infrastructure and validation aids from customer-facing products.
 
 ## Totals

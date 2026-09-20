@@ -1,5 +1,7 @@
 # Mission Ledger
 
+**Mission 16 — Awaken PREY (20 Sep 2026): COMPLETE — internal Core and Arena verified.** Local SQLite state, bounded deterministic dispatch, seven executable local roles, and one INTERNAL REPLAY were added. No market action occurred; Experiment #002 remains unchanged; paid runs, customers, and revenue remain 0.
+
 Only values supported by the project record are included. Counts are not added where the evidence does not establish them.
 
 | Mission | Date | Objective | Candidates/trails examined where known | Decision | Artifacts created | Market action? | Money signal? | Status |

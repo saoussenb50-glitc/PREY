@@ -1,5 +1,19 @@
 # PREY
 
+## Run PREY Core + Arena
+
+Prerequisite: Node.js 22.5 or later (the Core uses Node's built-in SQLite; no package install or paid service is required).
+
+```powershell
+npm test
+npm run replay
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000). `data/prey.sqlite` is created locally and preserves structured state and internal events. PREY Core is a small Node HTTP server plus SQLite store: P-00 dispatches bounded jobs to registered deterministic role handlers, collects structured results, and records events; J-01 makes deterministic evidence-bound judgments. The Arena reads persisted state.
+
+The seven roles are executable, dispatchable local implementations, not autonomous external AI workers: they do not browse, use a model/API, act in the background, or make market interventions. `npm run replay` is an explicitly internal historical replay and creates no market signal, customer, paid run, or revenue.
+
 PREY is a zero-additional-budget experiment for finding and validating tiny business opportunities before building software.
 
 Its canonical PREY V2 operating loop is:
@@ -12,12 +26,13 @@ The project deliberately separates research from proof. Complaints, competitor p
 
 | Measure | Current value |
 |---|---:|
-| Missions completed | 01–14 (including 06.5) |
+| Missions completed | 01–16 (including 06.5) |
 | Setup/control mission | 00 |
-| Verified autonomous sub-agents spawned | 0 |
-| Apps built | 0 |
+| Executable registered local roles | 7 |
+| Autonomous external workers | 0 |
+| Apps built | 1 internal |
 | Customer-facing apps built | 0 |
-| Dashboards built | 0 |
+| Dashboards built | 1 internal |
 | Software products built | 0 |
 | Market experiments prepared | 2 |
 | Market experiments live | 1 |

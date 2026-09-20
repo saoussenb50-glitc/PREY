@@ -1,0 +1,11 @@
+{
+  "name": "prey-core",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/server.js",
+    "replay": "node src/replay.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=22.5" }
+}
