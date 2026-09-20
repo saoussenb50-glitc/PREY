@@ -39,6 +39,10 @@ function open(dbPath = path.join(process.cwd(), 'data', 'prey.sqlite')) {
 function migrate(db) {
   const current = Number(db.prepare("SELECT value FROM schema_meta WHERE key='schema_version'").get()?.value || 0);
   if (current < 1) db.prepare("INSERT INTO schema_meta(key,value) VALUES('schema_version','1') ON CONFLICT(key) DO UPDATE SET value='1'").run();
+  if (current < 2) {
+    for (const sql of ["ALTER TABLE operator_audit ADD COLUMN previous_status TEXT", "ALTER TABLE operator_audit ADD COLUMN new_status TEXT", "ALTER TABLE operator_audit ADD COLUMN idempotency_key TEXT", "ALTER TABLE operator_audit ADD COLUMN handoff_id TEXT"]) { try { db.exec(sql); } catch (e) { if (!String(e.message).includes('duplicate column')) throw e; } }
+    db.prepare("INSERT INTO schema_meta(key,value) VALUES('schema_version','2') ON CONFLICT(key) DO UPDATE SET value='2'").run();
+  }
 }
 function event(db,type,entityType,entityId,payload={}) { db.prepare('INSERT INTO events(at,type,entity_type,entity_id,payload) VALUES(?,?,?,?,?)').run(new Date().toISOString(),type,entityType,entityId,JSON.stringify(payload)); }
 function seed(db) {
@@ -141,6 +145,29 @@ function ensureDecisionQueue(db) {
   if (c?.classification?.includes('DISTRIBUTION UNRESOLVED')) db.prepare("INSERT OR IGNORE INTO decision_queue VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)").run('DEC-C30-DISTRIBUTION','handoff_required','OPEN','candidate','C-30','A verified, compliant free opt-in distribution surface is unresolved.','D-01','CODEX HANDOFF',1,'system','2026-09-20T00:00:00.000Z','2026-09-20T00:00:00.000Z','C30-DISTRIBUTION-GATE');
 }
 function listDecisionQueue(db){ensureDecisionQueue(db);return db.prepare('SELECT * FROM decision_queue ORDER BY created_at,id').all();}
+function decisionAction(db,id,action) {
+  ensureDecisionQueue(db); const d=db.prepare('SELECT * FROM decision_queue WHERE id=?').get(id); if(!d) return {status:404,error:'decision_not_found'};
+  const transitions={acknowledge:{from:['OPEN'],to:'ACKNOWLEDGED'},approve:{from:['OPEN','ACKNOWLEDGED'],to:'APPROVED'},reject:{from:['OPEN','ACKNOWLEDGED'],to:'REJECTED'}}[action];
+  if(!transitions) return {status:400,error:'action_not_allowed'};
+  if(d.status===transitions.to) return {status:200,idempotent:true,decision:d};
+  if(!transitions.from.includes(d.status)) return {status:409,error:'invalid_transition',current_status:d.status};
+  const now=new Date().toISOString(), key=`${action}:${id}`;
+  db.prepare('UPDATE decision_queue SET status=?,updated_at=? WHERE id=?').run(transitions.to,now,id);
+  db.prepare('INSERT INTO operator_audit(at,action,target_type,target_id,actor,detail,previous_status,new_status,idempotency_key,handoff_id) VALUES(?,?,?,?,?,?,?,?,?,?)').run(now,action,'decision',id,'local-operator',JSON.stringify({entity_type:d.entity_type,entity_id:d.entity_id}),d.status,transitions.to,key,null);
+  return {status:200,idempotent:false,decision:db.prepare('SELECT * FROM decision_queue WHERE id=?').get(id)};
+}
+function generateHandoff(db,id) {
+  ensureDecisionQueue(db); const d=db.prepare('SELECT * FROM decision_queue WHERE id=?').get(id); if(!d) return {status:404,error:'decision_not_found'};
+  if(d.status!=='APPROVED') return {status:409,error:'approval_required',current_status:d.status};
+  const handoffId=`HANDOFF-${id}`, existing=db.prepare('SELECT * FROM handoffs WHERE id=?').get(handoffId); if(existing) return {status:200,idempotent:true,handoff:existing};
+  const candidate=db.prepare('SELECT id,name,status,classification FROM candidates WHERE id=?').get(d.entity_id); const evidence=db.prepare('SELECT id,title,url,claim FROM evidence WHERE candidate_id=? ORDER BY id').all(d.entity_id); const now=new Date().toISOString();
+  const objective='Find one verified, compliant, free opt-in distribution surface for small freight brokers / AP users.';
+  const inputs=JSON.stringify({candidate,decision_id:id,scope:'research only; no posting, outreach, contact, or market exposure'}), refs=JSON.stringify(evidence.map(x=>x.id));
+  db.prepare('INSERT INTO handoffs VALUES(?,?,?,?,?,?,?,?,?,?,?)').run(handoffId,id,objective,inputs,refs,d.role_id,'Arena cannot perform external web research or outreach.','CODEX HANDOFF','APPROVED','PREPARED',now);
+  db.prepare('INSERT INTO operator_audit(at,action,target_type,target_id,actor,detail,previous_status,new_status,idempotency_key,handoff_id) VALUES(?,?,?,?,?,?,?,?,?,?)').run(now,'generate_codex_handoff','decision',id,'local-operator',JSON.stringify({objective,evidence_refs:evidence.map(x=>x.id)}),d.status,d.status,`handoff:${id}`,handoffId);
+  return {status:201,idempotent:false,handoff:db.prepare('SELECT * FROM handoffs WHERE id=?').get(handoffId)};
+}
+function decisionHistory(db,id){return db.prepare('SELECT * FROM operator_audit WHERE target_type=? AND target_id=? ORDER BY id').all('decision',id);}
 function detailRecord(db,kind,id){const q={missions:['missions','id'],candidates:['candidates','id'],jobs:['jobs','id'],evidence:['evidence','id'],events:['events','id'],agents:['agents','id']}[kind];if(!q)return null;const row=db.prepare(`SELECT * FROM ${q[0]} WHERE ${q[1]}=?`).get(id);if(!row)return null;if(kind==='missions')return {...row,jobs:db.prepare('SELECT * FROM jobs WHERE json_extract(input,\'$.missionId\')=? ORDER BY created_at').all(id),evidence:db.prepare('SELECT * FROM evidence WHERE mission_id=? ORDER BY id').all(id),judgments:db.prepare('SELECT * FROM judgments WHERE mission_id=? ORDER BY created_at').all(id)};if(kind==='candidates')return {...row,evidence:db.prepare('SELECT * FROM evidence WHERE candidate_id=? ORDER BY id').all(id),judgments:db.prepare('SELECT * FROM judgments WHERE candidate_id=? ORDER BY created_at').all(id),kills:db.prepare('SELECT * FROM kills WHERE candidate_id=? ORDER BY id').all(id)};if(kind==='jobs')return {...row,agent:db.prepare('SELECT id,name,role,purpose,state FROM agents WHERE id=?').get(row.agent_id)||null};if(kind==='agents')return {...row,jobs:db.prepare('SELECT * FROM jobs WHERE agent_id=? ORDER BY created_at DESC').all(id)};return row;}
 function summary(db) { const m18=db.prepare("SELECT count(*) n FROM candidates WHERE classification='MISSION 18' OR id IN ('C-30','C-31','C-32')").get().n; return { candidates:29+m18, examinationRecords:33+m18, liveExperiments:db.prepare('SELECT count(*) n FROM experiments WHERE market_live=1').get().n, marketKills:0, executionBlocks:db.prepare('SELECT count(*) n FROM execution_blocks').get().n, customers:0, paidRuns:0, revenueCents:0, executableRoles:db.prepare('SELECT count(*) n FROM agents').get().n, autonomousWorkers:0, agentsAlive:db.prepare("SELECT count(*) n FROM agents WHERE state NOT IN ('KILLED','BLOCKED')").get().n, agentsKilled:0, deskKills:27+db.prepare("SELECT count(*) n FROM kills WHERE id LIKE 'K-18-%'").get().n, reserves:1+db.prepare("SELECT count(*) n FROM candidates WHERE classification='RESERVE'").get().n, reopened:2, experimentsPrepared:2, events:db.prepare('SELECT count(*) n FROM events').get().n }; }
-module.exports={open,event,runJob,dispatch,replay,runFirstRealHunt,runFindDoor,summary,priority,AGENTS,STATES,M18_CANDIDATES,M19_SURFACES,ensureDecisionQueue,listDecisionQueue,detailRecord};
+module.exports={open,event,runJob,dispatch,replay,runFirstRealHunt,runFindDoor,summary,priority,AGENTS,STATES,M18_CANDIDATES,M19_SURFACES,ensureDecisionQueue,listDecisionQueue,detailRecord,decisionAction,generateHandoff,decisionHistory};
