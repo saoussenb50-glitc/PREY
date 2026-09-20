@@ -114,5 +114,18 @@ function runFindDoor(db) {
   dispatch(db,{id:'JOB-19-QA',agentId:'Q-01',type:'qa_check',input:{recordedResult:{missionId:'M-19',verdict:'PASS',checks:['4 serious surfaces recorded','no UNVERIFIED surface promoted to VALID','no candidate added','no market action','EXP-002 unchanged','market counters and autonomous workers unchanged']},missionId:'M-19'},internal:true});
   db.prepare("UPDATE missions SET status='COMPLETED' WHERE id='M-19'").run();event(db,'mission_completed','mission','M-19',{candidate:'C-30',classification:judgment.classification,experiment_003:false,market_activity:false});return{alreadyRecorded:false,judgment};
 }
+function priority(db) {
+  const c = db.prepare("SELECT id,name,classification FROM candidates WHERE id='C-30'").get();
+  const exp = db.prepare("SELECT id,name,status FROM experiments WHERE id='EXP-002'").get();
+  const blocks = db.prepare('SELECT id,reason FROM execution_blocks ORDER BY id').all();
+  if (c?.classification?.includes('DISTRIBUTION UNRESOLVED')) return {
+    key:'C-30-DISTRIBUTION-GATE', label:'Resolve C-30 distribution gate', target:'C-30',
+    why:'C-30 is the only existing reserve and its persisted judgment says distribution is unresolved.',
+    next:'Obtain one verified, compliant opt-in surface for small freight brokers; do not post or contact anyone from Arena.',
+    role:'D-01 DISTRIBUTION SCOUT', boundary:'CODEX HANDOFF', approval:'Human approval required before any external research or outreach.',
+    status:c.classification, experiment:exp?.status||'UNKNOWN', blocks
+  };
+  return {key:'REVIEW-STATE',label:'Review persisted hunt state',target:null,why:'No higher-priority persisted gate was found.',next:'Inspect the decision queue.',role:'J-01 JUDGE',boundary:'LOCAL',approval:'Human approval required.',status:'READY',experiment:exp?.status||'UNKNOWN',blocks};
+}
 function summary(db) { const m18=db.prepare("SELECT count(*) n FROM candidates WHERE classification='MISSION 18' OR id IN ('C-30','C-31','C-32')").get().n; return { candidates:29+m18, examinationRecords:33+m18, liveExperiments:db.prepare('SELECT count(*) n FROM experiments WHERE market_live=1').get().n, marketKills:0, executionBlocks:db.prepare('SELECT count(*) n FROM execution_blocks').get().n, customers:0, paidRuns:0, revenueCents:0, executableRoles:db.prepare('SELECT count(*) n FROM agents').get().n, autonomousWorkers:0, agentsAlive:db.prepare("SELECT count(*) n FROM agents WHERE state NOT IN ('KILLED','BLOCKED')").get().n, agentsKilled:0, deskKills:27+db.prepare("SELECT count(*) n FROM kills WHERE id LIKE 'K-18-%'").get().n, reserves:1+db.prepare("SELECT count(*) n FROM candidates WHERE classification='RESERVE'").get().n, reopened:2, experimentsPrepared:2, events:db.prepare('SELECT count(*) n FROM events').get().n }; }
-module.exports={open,event,runJob,dispatch,replay,runFirstRealHunt,runFindDoor,summary,AGENTS,STATES,M18_CANDIDATES,M19_SURFACES};
+module.exports={open,event,runJob,dispatch,replay,runFirstRealHunt,runFindDoor,summary,priority,AGENTS,STATES,M18_CANDIDATES,M19_SURFACES};
