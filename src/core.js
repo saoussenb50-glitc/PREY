@@ -38,7 +38,7 @@ function seed(db) {
   db.prepare('INSERT INTO candidates VALUES(?,?,?,?)').run('C-26','YouTube/bodycam SRT correction','REOPENED','LIVE TEST');
   db.prepare('INSERT INTO experiments VALUES(?,?,?,?)').run('EXP-001','Square Consignor Payout Pack','READY — NOT LAUNCHED',0);
   db.prepare('INSERT INTO experiments VALUES(?,?,?,?)').run('EXP-002','Bodycam SRT Rescue','LIVE',1);
-  db.prepare('INSERT INTO builds VALUES(?,?,?,?)').run('BUILD-16','PREY Core + Arena v0.1','ACTIVE','internal infrastructure');
+  db.prepare('INSERT INTO builds VALUES(?,?,?,?)').run('BUILD-16','PREY Core + Arena v0.2','ACTIVE','internal infrastructure');
   db.prepare('INSERT INTO signals VALUES(?,?,?,?,?)').run('SIG-002-VIEWS','EXP-002','generic_platform_views','58','2026-09-20T01:42:50+02:00');
   for (let i=1;i<=27;i++) db.prepare('INSERT INTO kills VALUES(?,?,?,?)').run(`K-${i}`,`C-HIST-${i}`,'DESK_RESEARCH','Historical Mission 01–04 desk-research kill');
   db.prepare('INSERT INTO execution_blocks VALUES(?,?,?)').run('BLOCK-07','M-07','Browser execution infrastructure prevented #001 publication');
@@ -74,5 +74,5 @@ function replay(db) {
   const judge=dispatch(db,{id:'REPLAY-16-JUDGE',agentId:'J-01',type:'judgment',input:{jobId:hunt.id,...hunt.result},internal:true});
   event(db,'internal_replay_complete','mission','M-16',{jobs:[hunt.id,judge.id],market_evidence_created:false,money_created:false}); return {hunt,judge};
 }
-function summary(db) { return { candidates:29, examinationRecords:33, liveExperiments:db.prepare('SELECT count(*) n FROM experiments WHERE market_live=1').get().n, marketKills:0, executionBlocks:db.prepare('SELECT count(*) n FROM execution_blocks').get().n, customers:0, revenueCents:0, agentsAlive:db.prepare("SELECT count(*) n FROM agents WHERE state NOT IN ('KILLED','BLOCKED')").get().n, agentsKilled:0, deskKills:27, reserves:1, reopened:2, experimentsPrepared:2, events:db.prepare('SELECT count(*) n FROM events').get().n }; }
+function summary(db) { return { candidates:29, examinationRecords:33, liveExperiments:db.prepare('SELECT count(*) n FROM experiments WHERE market_live=1').get().n, marketKills:0, executionBlocks:db.prepare('SELECT count(*) n FROM execution_blocks').get().n, customers:0, paidRuns:0, revenueCents:0, executableRoles:db.prepare('SELECT count(*) n FROM agents').get().n, autonomousWorkers:0, agentsAlive:db.prepare("SELECT count(*) n FROM agents WHERE state NOT IN ('KILLED','BLOCKED')").get().n, agentsKilled:0, deskKills:27, reserves:1, reopened:2, experimentsPrepared:2, events:db.prepare('SELECT count(*) n FROM events').get().n }; }
 module.exports={open,event,runJob,dispatch,replay,summary,AGENTS,STATES};
