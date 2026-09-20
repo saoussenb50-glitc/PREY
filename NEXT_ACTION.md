@@ -1,5 +1,7 @@
 # Next Action
 
+Mission 15's synthetic dry run is complete. For a genuine first order, use `mission-14/FIRST_BUYER_RUNBOOK.md`, confirm every pre-acceptance field, and treat the first source-audio review, private transfer, clarification, and delivery timing as new operational evidence. Do not infer profitability or a 20-minute labor estimate from the synthetic fixture.
+
 ## Preserve Experiment #002 until its checkpoint
 
 Keep the existing r/CreatorServices post unchanged through **26 September 2026**, or until a defensible qualified-view metric reaches **100**, whichever occurs first. Check no more than once daily unless a relevant inbound notification appears. Record only observed evidence in `EXPERIMENT_SIGNAL_LEDGER.md`; do not convert Reddit's generic views into qualified views.

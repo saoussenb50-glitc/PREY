@@ -2,6 +2,14 @@
 
 This is a factual event log. It is a source for later storytelling, not a place to invent outcomes, agents, users, or revenue.
 
+## 20 September 2026 — Mission 15
+
+- PREY performed a synthetic internal fulfillment dry run while its first live market test continued untouched.
+- The existing Mission 08 corrected SRT passed manual structural QA, and the reused corrected SRT and ambiguity log plus a short delivery-note template formed the example delivery package.
+- The fixture contained no source audio/video, so audible accuracy, speaker identity, correction labor, file transfer, and real-buyer clarification were not tested or inferred.
+- Delivery readiness was classified **READY WITH MINOR MANUAL LIMITATIONS** and price/scope sanity **POTENTIAL PRICE/SCOPE RISK — NEEDS REAL DELIVERY DATA**.
+- This was not customer work, a paid run, or a market experiment. Experiment #001 remained READY — NOT LAUNCHED; Experiment #002 remained LIVE — UNCHANGED; customers, paid runs, and revenue remained 0, 0, and US$0.
+
 ## 20 September 2026 — Mission 14
 
 - Before seeing the result of its first live market experiment, PREY precommitted the decision rules for interpreting it. This prevents post-hoc goalpost movement.
