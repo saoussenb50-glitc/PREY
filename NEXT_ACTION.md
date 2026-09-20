@@ -1,9 +1,21 @@
 # Next Action
 
-## Preserve Experiment #002's live test window
+## Preserve Experiment #002 until its checkpoint
 
-Keep the existing r/CreatorServices post unchanged and observe it through **26 September 2026** (7 days from its 19 September publication), or until Reddit exposes **100 qualified views** through a meaningful usable metric, whichever checkpoint is reached first. Record only observable signals: qualified comments, relevant Reddit messages, questions about buying, post views where available, demo clicks where observable, paid runs, and revenue. Do not count upvotes, views, comments, or messages as revenue or validation.
+Keep the existing r/CreatorServices post unchanged through **26 September 2026**, or until a defensible qualified-view metric reaches **100**, whichever occurs first. Check no more than once daily unless a relevant inbound notification appears. Record only observed evidence in `EXPERIMENT_SIGNAL_LEDGER.md`; do not convert Reddit's generic views into qualified views.
 
-Use `EXPERIMENT_SIGNAL_LEDGER.md` for future timestamped checks and `mission-11/RESPONSE_PLAYBOOK.md` only after genuine inbound interest. The current 58 Reddit platform views are generic, not qualified, so they do not trigger the early checkpoint. Check no more than once daily unless a relevant inbound notification appears.
+Experiment #001 remains **READY — NOT LAUNCHED**. Do not launch it, create Experiment #003, edit or promote Experiment #002, contact prospects, change price or scope, retry/appeal Upwork, spend money, build software, or create an agent.
 
-The primary success signal is **at least one paid manual run**. Customers, paid runs, and revenue are currently **0 / 0 / US$0**. Do not change the offer merely because it has just launched; do not launch Experiment #001 simultaneously; and do not start Experiment #003. At the checkpoint, classify the result from recorded evidence as a paid signal, offer failure under the approved rule, or distribution failure.
+## Mechanical checkpoint procedure
+
+At the checkpoint:
+
+1. Freeze the observation record without changing the offer.
+2. Check whether execution or measurement was materially compromised.
+3. Map the recorded evidence to exactly one ordered state in `EXPERIMENT_DECISION_PROTOCOL.md`: **A. PAID SIGNAL; B. BUYING INTENT, NO PAYMENT; C. INTEREST, NO BUYING INTENT; D. MEANINGFUL EXPOSURE, ZERO QUALIFIED INTEREST; E. INSUFFICIENT EXPOSURE; or F. EXECUTION / MEASUREMENT FAILURE**.
+4. Record the evidence for that classification.
+5. Execute only the precommitted next move for that state. Any new exposure or retest requires separate authorization and a new experiment record.
+
+The primary commercial success criterion is frozen at **at least one paid manual run**. Views, upvotes, comments, DMs, and interest remain secondary signals and cannot be promoted into success or revenue. If meaningful exposure cannot be defensibly established, the result is **E. INSUFFICIENT EXPOSURE**, not a market kill.
+
+Current verified baseline remains: 58 generic views, 1 upvote, 0 comments, 0 qualified inquiries, 0 buying intent, 0 paid runs, 0 customers, and **US$0 revenue**. Do not classify Experiment #002 before the checkpoint.

@@ -12,7 +12,7 @@ The project deliberately separates research from proof. Complaints, competitor p
 
 | Measure | Current value |
 |---|---:|
-| Missions completed | 01–13 (including 06.5) |
+| Missions completed | 01–14 (including 06.5) |
 | Setup/control mission | 00 |
 | Verified autonomous sub-agents spawned | 0 |
 | Apps built | 0 |
@@ -42,6 +42,7 @@ The project deliberately separates research from proof. Complaints, competitor p
 - **11 — Watch the Trap:** recorded the live baseline, defined a signal taxonomy and decision checkpoints, and prepared an unsent inbound-response playbook without changing the offer.
 - **12 — The Graveyard:** consolidated 29 deduplicated candidates into a factual graveyard and mapped PREY-specific failure patterns without changing the live experiment.
 - **13 — Rewrite the Rules:** formalized PREY V2, its research/distribution/build/agent gates, evidence labels, scoreboard, and reusable mission template while Experiment #002 continued unchanged.
+- **14 — Load the Chamber:** precommitted Experiment #002's six checkpoint outcomes, allowed next moves, exposure standard, and first-buyer manual runbook without changing the live test.
 
 The autopsy reopened two candidates for bounded market tests: Square consignor payout packs and YouTube/bodycam SRT correction. Both have manual test kits. Experiment #001 remains READY — NOT LAUNCHED; Experiment #002 is LIVE. Exposure authorizes observation and a manual money test, not a software build.
 
@@ -65,8 +66,10 @@ No customer outcome, market response, or revenue is claimed. See `EXPERIMENT_LED
 - `PATTERN_MAP.md` — recurring PREY failure patterns and the v1-to-v2 methodological transition.
 - `PREY_PROTOCOL_V2.md` — canonical operating loop, gates, evidence labels, decision rules, and scoreboard specification.
 - `MISSION_TEMPLATE.md` — compact required structure for future missions.
+- `EXPERIMENT_DECISION_PROTOCOL.md` — precommitted Experiment #002 checkpoint states, evidence requirements, and allowed next moves.
 - `evidence/` — mission evidence and decisions.
 - `mission-06/` — the unlaunched Square experiment kit and synthetic demo.
+- `mission-14/` — the manual first-buyer operational and delivery-QA runbook.
 
 ## Operating boundaries
 

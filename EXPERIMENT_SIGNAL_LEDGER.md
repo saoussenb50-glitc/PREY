@@ -26,6 +26,8 @@ Check the live post and directly related Reddit inbox/chat no more than once dai
 
 Evaluate Experiment #002 on **26 September 2026**, or earlier only if a meaningful and defensible qualified-view metric reaches 100.
 
+At that checkpoint, `EXPERIMENT_DECISION_PROTOCOL.md` is controlling. Map the frozen observation record to exactly one of its six precommitted states and execute only that state's allowed next move. Do not reinterpret generic views as qualified exposure or lower commercial success below one paid manual run.
+
 - **At least one paid run:** commercial signal achieved.
 - **Buying-intent conversations but no paid run:** inspect price, scope, trust, and payment friction before deciding the next test.
 - **Meaningful exposure but no qualified interest:** the offer, segment, or distribution signal is weak.

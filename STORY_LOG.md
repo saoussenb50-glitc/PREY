@@ -2,6 +2,13 @@
 
 This is a factual event log. It is a source for later storytelling, not a place to invent outcomes, agents, users, or revenue.
 
+## 20 September 2026 — Mission 14
+
+- Before seeing the result of its first live market experiment, PREY precommitted the decision rules for interpreting it. This prevents post-hoc goalpost movement.
+- `EXPERIMENT_DECISION_PROTOCOL.md` froze six mutually exclusive outcomes, conservative exposure evidence, the paid-run success criterion, the second-delivery comparability rule, and the only next move permitted for each outcome.
+- `mission-14/FIRST_BUYER_RUNBOOK.md` documented manual intake, payment, privacy, correction, ambiguity, QA, delivery, and factual recording for a genuine buyer.
+- No new market signal occurred merely because this mission was completed. Experiment #001 remained READY — NOT LAUNCHED; Experiment #002 remained LIVE — UNCHANGED. Qualified inquiries, buying intent, paid runs, customers, and revenue remained 0, 0, 0, 0, and US$0.
+
 ## 20 September 2026 — Mission 13
 
 - PREY examined its own graveyard and rewrote its operating rules while the first live experiment continued untouched.
