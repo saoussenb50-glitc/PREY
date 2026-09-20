@@ -28,8 +28,17 @@ function open(dbPath = path.join(process.cwd(), 'data', 'prey.sqlite')) {
     CREATE TABLE IF NOT EXISTS events(id INTEGER PRIMARY KEY AUTOINCREMENT,at TEXT,type TEXT,entity_type TEXT,entity_id TEXT,payload TEXT);
     CREATE TABLE IF NOT EXISTS jobs(id TEXT PRIMARY KEY,agent_id TEXT,type TEXT,state TEXT,input TEXT,result TEXT,created_at TEXT);
     CREATE TABLE IF NOT EXISTS evidence(id TEXT PRIMARY KEY,mission_id TEXT,candidate_id TEXT,role_id TEXT,title TEXT,url TEXT,claim TEXT);
-    CREATE TABLE IF NOT EXISTS judgments(id TEXT PRIMARY KEY,mission_id TEXT,candidate_id TEXT,classification TEXT,reason TEXT,created_at TEXT);`);
-  seed(db); return db;
+    CREATE TABLE IF NOT EXISTS judgments(id TEXT PRIMARY KEY,mission_id TEXT,candidate_id TEXT,classification TEXT,reason TEXT,created_at TEXT);
+    CREATE TABLE IF NOT EXISTS schema_meta(key TEXT PRIMARY KEY,value TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS decision_queue(id TEXT PRIMARY KEY,kind TEXT NOT NULL,status TEXT NOT NULL,entity_type TEXT NOT NULL,entity_id TEXT NOT NULL,reason TEXT NOT NULL,role_id TEXT NOT NULL,boundary TEXT NOT NULL,approval_required INTEGER NOT NULL,actor TEXT NOT NULL,created_at TEXT NOT NULL,updated_at TEXT NOT NULL,idempotency_key TEXT UNIQUE);
+    CREATE TABLE IF NOT EXISTS handoffs(id TEXT PRIMARY KEY,decision_id TEXT NOT NULL,objective TEXT NOT NULL,inputs TEXT NOT NULL,evidence_refs TEXT NOT NULL,role_id TEXT NOT NULL,reason TEXT NOT NULL,boundary TEXT NOT NULL,approval_status TEXT NOT NULL,status TEXT NOT NULL,created_at TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS operator_audit(id INTEGER PRIMARY KEY AUTOINCREMENT,at TEXT NOT NULL,action TEXT NOT NULL,target_type TEXT NOT NULL,target_id TEXT NOT NULL,actor TEXT NOT NULL,detail TEXT NOT NULL);
+  `);
+  migrate(db); seed(db); return db;
+}
+function migrate(db) {
+  const current = Number(db.prepare("SELECT value FROM schema_meta WHERE key='schema_version'").get()?.value || 0);
+  if (current < 1) db.prepare("INSERT INTO schema_meta(key,value) VALUES('schema_version','1') ON CONFLICT(key) DO UPDATE SET value='1'").run();
 }
 function event(db,type,entityType,entityId,payload={}) { db.prepare('INSERT INTO events(at,type,entity_type,entity_id,payload) VALUES(?,?,?,?,?)').run(new Date().toISOString(),type,entityType,entityId,JSON.stringify(payload)); }
 function seed(db) {
@@ -127,5 +136,11 @@ function priority(db) {
   };
   return {key:'REVIEW-STATE',label:'Review persisted hunt state',target:null,why:'No higher-priority persisted gate was found.',next:'Inspect the decision queue.',role:'J-01 JUDGE',boundary:'LOCAL',approval:'Human approval required.',status:'READY',experiment:exp?.status||'UNKNOWN',blocks};
 }
+function ensureDecisionQueue(db) {
+  const c=db.prepare("SELECT id,classification FROM candidates WHERE id='C-30'").get();
+  if (c?.classification?.includes('DISTRIBUTION UNRESOLVED')) db.prepare("INSERT OR IGNORE INTO decision_queue VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)").run('DEC-C30-DISTRIBUTION','handoff_required','OPEN','candidate','C-30','A verified, compliant free opt-in distribution surface is unresolved.','D-01','CODEX HANDOFF',1,'system','2026-09-20T00:00:00.000Z','2026-09-20T00:00:00.000Z','C30-DISTRIBUTION-GATE');
+}
+function listDecisionQueue(db){ensureDecisionQueue(db);return db.prepare('SELECT * FROM decision_queue ORDER BY created_at,id').all();}
+function detailRecord(db,kind,id){const q={missions:['missions','id'],candidates:['candidates','id'],jobs:['jobs','id'],evidence:['evidence','id'],events:['events','id'],agents:['agents','id']}[kind];if(!q)return null;const row=db.prepare(`SELECT * FROM ${q[0]} WHERE ${q[1]}=?`).get(id);if(!row)return null;if(kind==='missions')return {...row,jobs:db.prepare('SELECT * FROM jobs WHERE json_extract(input,\'$.missionId\')=? ORDER BY created_at').all(id),evidence:db.prepare('SELECT * FROM evidence WHERE mission_id=? ORDER BY id').all(id),judgments:db.prepare('SELECT * FROM judgments WHERE mission_id=? ORDER BY created_at').all(id)};if(kind==='candidates')return {...row,evidence:db.prepare('SELECT * FROM evidence WHERE candidate_id=? ORDER BY id').all(id),judgments:db.prepare('SELECT * FROM judgments WHERE candidate_id=? ORDER BY created_at').all(id),kills:db.prepare('SELECT * FROM kills WHERE candidate_id=? ORDER BY id').all(id)};if(kind==='jobs')return {...row,agent:db.prepare('SELECT id,name,role,purpose,state FROM agents WHERE id=?').get(row.agent_id)||null};if(kind==='agents')return {...row,jobs:db.prepare('SELECT * FROM jobs WHERE agent_id=? ORDER BY created_at DESC').all(id)};return row;}
 function summary(db) { const m18=db.prepare("SELECT count(*) n FROM candidates WHERE classification='MISSION 18' OR id IN ('C-30','C-31','C-32')").get().n; return { candidates:29+m18, examinationRecords:33+m18, liveExperiments:db.prepare('SELECT count(*) n FROM experiments WHERE market_live=1').get().n, marketKills:0, executionBlocks:db.prepare('SELECT count(*) n FROM execution_blocks').get().n, customers:0, paidRuns:0, revenueCents:0, executableRoles:db.prepare('SELECT count(*) n FROM agents').get().n, autonomousWorkers:0, agentsAlive:db.prepare("SELECT count(*) n FROM agents WHERE state NOT IN ('KILLED','BLOCKED')").get().n, agentsKilled:0, deskKills:27+db.prepare("SELECT count(*) n FROM kills WHERE id LIKE 'K-18-%'").get().n, reserves:1+db.prepare("SELECT count(*) n FROM candidates WHERE classification='RESERVE'").get().n, reopened:2, experimentsPrepared:2, events:db.prepare('SELECT count(*) n FROM events').get().n }; }
-module.exports={open,event,runJob,dispatch,replay,runFirstRealHunt,runFindDoor,summary,priority,AGENTS,STATES,M18_CANDIDATES,M19_SURFACES};
+module.exports={open,event,runJob,dispatch,replay,runFirstRealHunt,runFindDoor,summary,priority,AGENTS,STATES,M18_CANDIDATES,M19_SURFACES,ensureDecisionQueue,listDecisionQueue,detailRecord};
